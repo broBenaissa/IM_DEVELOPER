@@ -29,6 +29,7 @@
 						</figure>
 						<a href="registration.jsp" class="signup-image-link">Create an
 							account</a>
+							<a href="index.jsp" class="signup-image-link">home page</a>
 					</div>
 
 					<div class="signin-form">
