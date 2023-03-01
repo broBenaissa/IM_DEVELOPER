@@ -15,6 +15,8 @@
 </head>
 <body>
 
+<input type="hidden" id ="status" value ="<%= request.getAttribute("status") %>">
+
 	<div class="main">
 
 		<!-- Sign up form -->
@@ -24,7 +26,7 @@
 					<div class="signup-form">
 						<h2 class="form-title">Sign up</h2>
 					
-						<form method="post" action="register" class="register-form"
+						<form method="post" action="RegistrationServlet" class="register-form"
 							id="register-form">
 							<div class="form-group">
 								<label for="name"><i
@@ -64,7 +66,7 @@
 					</div>
 					<div class="signup-image">
 						<figure>
-							<img src="images/signup-image.jpg" alt="sing up image">
+							<img src="" alt="sing up image">
 						</figure>
 						<a href="login.jsp" class="signup-image-link">I am already
 							member</a>
@@ -78,9 +80,16 @@
 	<!-- JS -->
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css" >
 
-
+<script type = "text/javascript">
+var status = document.getElementById("status").value;
+if (status == "success"){
+	swal("Congrats","Account Created Successfuly", "success");
+}
+</script>
 
 </body>
-
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
