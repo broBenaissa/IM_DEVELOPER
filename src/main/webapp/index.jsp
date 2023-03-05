@@ -1,3 +1,8 @@
+<%
+if (session.getAttribute("name")== null){
+	response.sendRedirect("login.jsp");
+}
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +11,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>IM DEVELOPPER</title>
+<title>IM DEVELOPER</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
@@ -43,7 +48,9 @@
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="index.jsp">Logout</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout">Logout</a></li>
+					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%= session.getAttribute("name") %></a></li>
 					
 				</ul>
 			</div>
@@ -56,7 +63,7 @@
 			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
 				alt="..." />
 			<!-- Masthead Heading-->
-			<h1 class="masthead-heading text-uppercase mb-0">Welcome DEVELOPER</h1>
+			<h1 class="masthead-heading text-uppercase mb-0">Welcome</h1>
 			<!-- Icon Divider-->
 			<div class="divider-custom divider-light">
 				<div class="divider-custom-line"></div>
@@ -130,7 +137,7 @@
 					 This quality and results-based approach drove
 					  me to collaborate with the VP of sales at
 					   Squarespace to create a digital marketing 
-					   campaign that tripled average signups in a
+					   campaign that tripled average sign up in a
 					    single month. Eager to obtain a challenging
 					     position at a prestigious company like Dream
 					      Version that will expand my learning and build
@@ -142,7 +149,7 @@
 			<div class="text-center mt-4">
 				<a class="btn btn-xl btn-outline-light"
 					href="https://github.com/">
-			        see me in Github!
+			        Link of Github!
 				</a>
 			</div>
 		</div>
@@ -238,7 +245,7 @@
 				<div class="col-lg-4 mb-5 mb-lg-0">
 					<h4 class="text-uppercase mb-4">Location</h4>
 					<p class="lead mb-0">
-						Lstah Taroudant Morocoo <br /> Stret 12,MO43
+						Lastah Taroudant Morocco <br /> Street 12,MO43
 					</p>
 				</div>
 				<!-- Footer Social Icons-->
