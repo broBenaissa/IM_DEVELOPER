@@ -1,3 +1,8 @@
+<%
+//if(session.getAttribute("name")==null)
+	//response.sendRedirect("login.jsp");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +32,10 @@
             <li><a href="#services" data-after="Service">Services</a></li>
             <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li class="nav-item mx-0 mx-lg-1 bg-danger"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%= session.getAttribute("name") %></a></li>
+            
+            
           </ul>
         </div>
       </div>
