@@ -251,10 +251,9 @@
 												technologies utilisées et des images ou des vidéos
 												du produit final. Il peut également inclure des
 												témoignages de clients satisfaits.</p>
-								<button class="btn btn-primary" href="DeveloperHome.jsp"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> More About Me?
-								</button>
+								<a class="btn btn-primary" href="DeveloperHome.jsp">
+									 More About Me?
+								</a>
 							</div>
 						</div>
 					</div>
@@ -302,10 +301,9 @@
 												technologies utilisées et des images ou des vidéos
 												du produit final. Il peut également inclure des
 												témoignages de clients satisfaits.</p>
-								<button class="btn btn-primary" href="DeveloperHome.jsp"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> More About Me?
-								</button>
+								<a class="btn btn-primary" href="DeveloperHome.jsp">
+									 More About Me?
+								</a>
 							</div>
 						</div>
 					</div>
@@ -353,10 +351,9 @@
 												technologies utilisées et des images ou des vidéos
 												du produit final. Il peut également inclure des
 												témoignages de clients satisfaits.</p>
-								<button class="btn btn-primary" href="DeveloperHome.jsp"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> More About Me?
-								</button>
+								<a class="btn btn-primary" href="DeveloperHome.jsp">
+									 More About Me?
+								</a>
 							</div>
 						</div>
 					</div>

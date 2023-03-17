@@ -33,11 +33,10 @@ public class RegistrationServlet extends HttpServlet {
 		
 		RequestDispatcher dispatcher = null;
 		Connection con= null;
+		con = _Connection.getConnection();
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost/new?useSSL=false","root","salma-4u");
-			PreparedStatement pst= con.prepareStatement("insert into first (uname, upwd, uemail, umobile) values(?,?,?,?)");
+			PreparedStatement pst= con.prepareStatement("insert into users (uname, upwd, uemail, umobile) values(?,?,?,?)");
 			pst.setString(1, uname);
 			pst.setString(2, upwd);
 			pst.setString(3, uemail);

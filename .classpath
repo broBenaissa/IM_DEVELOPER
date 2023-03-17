@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 17.0.6 [17.0.6]">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
@@ -36,10 +36,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.servlet-3.0.0.v201112011016-sources.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="D:/mysql-connector-j-8.0.31.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.servlet-3.0.0.v201112011016-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

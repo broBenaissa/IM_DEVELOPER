@@ -27,11 +27,9 @@ public class Login extends HttpServlet {
 		String upwd = request.getParameter("password");
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = null;
-		
+		Connection con = _Connection.getConnection();
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/new?useSSL=false","root","benaissa");
-			PreparedStatement pst = con.prepareStatement("select * from first where uemail=? and upwd=?");
+			PreparedStatement pst = con.prepareStatement("select * from users where uemail=? and upwd=?");
 			pst.setString(1, uemail);
 			pst.setString(2, upwd);
 			

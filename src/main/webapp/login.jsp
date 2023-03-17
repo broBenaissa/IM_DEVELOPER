@@ -29,7 +29,7 @@
 						</figure>
 						<a href="registration.jsp" class="signup-image-link">Create an
 							account</a>
-							<a href="index.jsp" class="signup-image-link">home page</a>
+							
 					</div>
 
 					<div class="signin-form">
@@ -47,12 +47,7 @@
 									type="password" name="password" id="password"
 									placeholder="Password" />
 							</div>
-							<div class="form-group">
-								<input type="checkbox" name="remember-me" id="remember-me"
-									class="agree-term" /> <label for="remember-me"
-									class="label-agree-term"><span><span></span></span>Remember
-									me</label>
-							</div>
+							
 							<div class="form-group form-button">
 								<input type="submit" name="signin" id="signin"
 									class="form-submit" value="Log in" />
@@ -89,5 +84,4 @@ if (status == "failed"){
 }
 </script>
 </body>
-<!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
