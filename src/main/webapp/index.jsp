@@ -38,7 +38,7 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">New Posts</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">RECENT POSTS</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About Us</a></li>
 					
@@ -74,7 +74,7 @@
 		<div class="container">
 			<!-- Portfolio Section Heading-->
 			<h2
-				class="page-section-heading text-center text-uppercase text-secondary mb-0">New posts</h2>
+				class="page-section-heading text-center text-uppercase text-secondary mb-0">RECENT posts</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom">
 				<div class="divider-custom-line"></div>
@@ -150,8 +150,8 @@
 			</div>
 			<!-- About Section Content-->
 			<div class="row">
-				<div class="col-lg-4 ms-auto">
-					<p class="lead">Software engineer with a proven ability 
+				<div >
+					<h4 class="lead">Software engineer with a proven ability 
 					 to adapt in both self-starting and collaborative
 					 environments while staying focused on achieving 
 					 high-quality results under strict deadlines. 
@@ -162,7 +162,7 @@
 					 single month. Eager to obtain a challenging
 					 position at a prestigious company like Dream
 					 Version that will expand my learning and build
-					 upon my developer skills.</p>
+					 upon my developer skills.</h4>
 				</div>
 			</div>
 			<!-- About Section Button-->
@@ -240,17 +240,17 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/favicon.ico" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Cette Application représente le portfolio et les
-												services d'un développeur.
-												le portfolio est un outil utilisé pour présenter des
-												réalisations, des compétences et des expérience
-												professionnelle à un employeur ou à des clients
-												potentiels.
-												Il présente les projets de design du concepteur,
-												avec une brève description de chaque projet, les
-												technologies utilisées et des images ou des vidéos
-												du produit final. Il peut également inclure des
-												témoignages de clients satisfaits.</p>
+								<p class="mb-4">This Application represents the portfolio and the
+												services of a developer.
+												the portfolio is a tool used to present
+												achievements, skills and experience
+												professional to an employer or clients
+												potentials.
+												It presents the design projects of the designer,
+												with a brief description of each project, the
+												technologies used and images or videos
+												of the final product. It can also include
+												testimonials from satisfied customers.</p>
 								<a class="btn btn-primary" href="DeveloperHome.jsp">
 									 More About Me?
 								</a>
@@ -290,17 +290,17 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/favicon.ico" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Cette Application représente le portfolio et les
-												services d'un développeur.
-												le portfolio est un outil utilisé pour présenter des
-												réalisations, des compétences et des expérience
-												professionnelle à un employeur ou à des clients
-												potentiels.
-												Il présente les projets de design du concepteur,
-												avec une brève description de chaque projet, les
-												technologies utilisées et des images ou des vidéos
-												du produit final. Il peut également inclure des
-												témoignages de clients satisfaits.</p>
+								<p class="mb-4">This Application represents the portfolio and the
+												services of a developer.
+												the portfolio is a tool used to present
+												achievements, skills and experience
+												professional to an employer or clients
+												potentials.
+												It presents the design projects of the designer,
+												with a brief description of each project, the
+												technologies used and images or videos
+												of the final product. It can also include
+												testimonials from satisfied customers.</p>
 								<a class="btn btn-primary" href="DeveloperHome.jsp">
 									 More About Me?
 								</a>
@@ -340,17 +340,17 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/favicon.ico" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Cette Application représente le portfolio et les
-												services d'un développeur.
-												le portfolio est un outil utilisé pour présenter des
-												réalisations, des compétences et des expérience
-												professionnelle à un employeur ou à des clients
-												potentiels.
-												Il présente les projets de design du concepteur,
-												avec une brève description de chaque projet, les
-												technologies utilisées et des images ou des vidéos
-												du produit final. Il peut également inclure des
-												témoignages de clients satisfaits.</p>
+								<p class="mb-4">This Application represents the portfolio and the
+												services of a developer.
+												the portfolio is a tool used to present
+												achievements, skills and experience
+												professional to an employer or clients
+												potentials.
+												It presents the design projects of the designer,
+												with a brief description of each project, the
+												technologies used and images or videos
+												of the final product. It can also include
+												testimonials from satisfied customers.</p>
 								<a class="btn btn-primary" href="DeveloperHome.jsp">
 									 More About Me?
 								</a>

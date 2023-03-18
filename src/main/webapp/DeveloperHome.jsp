@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>My Website</title>
+  <title>ImDevelopper</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
           </a>
         </div>
         <div class="nav-list">
-          <div class="hamburger">
+          <div class="hamburger" >
             <div class="bar"></div>
           </div>
           <ul>
@@ -33,8 +33,7 @@
             <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
             <li class="nav-item mx-0 mx-lg-1 bg-danger"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%= session.getAttribute("name") %></a></li>
-            
+			class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%= session.getAttribute("name") %></a></li>
             
           </ul>
         </div>
@@ -50,8 +49,8 @@
       <div>
         <h1>Hello, <span></span></h1>
         <h1>My Name is <span></span></h1>
-        <h1>unknown <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <h1><%= session.getAttribute("name") %><span></span></h1>
+        <a href="#about" type="button" class="cta">About me</a>
       </div>
     </div>
   </section>
@@ -62,34 +61,46 @@
     <div class="services container">
       <div class="service-top">
         <h1 class="section-title">Serv<span>i</span>ces</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum deleniti maiores pariatur assumenda quas
-          magni et, doloribus quod voluptate quasi molestiae magnam officiis dolorum, dolor provident atque molestias
-          voluptatum explicabo!</p>
+        <h2>From boosting page speed to creating seamless user experiences, your website s infrastructure must
+         be ready to perform. We complement your in-house development teams with the expertise and perspective
+          to create high-quality, marketing-driven websites and web apps, providing the necessary maintenance
+           to help optimize your digital presence!</h2>
       </div>
+      <!-- services item -->
+      
       <div class="service-bottom">
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>Site Speed Optimization</h2>
+          <p> will take a look at a variety of elements such as browser caching, image compression,
+           server response time, 3rd party scripts, and CWV scores to implement changes that will lead 
+           to better rankings,  engagement, and conversion rates for your organization.</p>
+         <a href="#contact" class="cta">aply now</a>
         </div>
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>Web Development</h2>
+          <p>Whether you manage content on WordPress, Drupal, or Magento, or code with PHP, JavaScript, 
+          or Python, we have you covered; we act as an extension of your team and help you create a fast,
+           mobile-friendly site with accessibility in mind.</p>
+            <a href="" class="cta">aply now</a>
         </div>
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>Progressive Web Apps</h2>
+          <p>We work with your team to establish the necessary app requirements and develop an interface
+           that creates a native experience for your users; complete with saved customizations, background updating,
+            and offline content and functionality. The result is a reliable web application that delivers a seamless 
+            experience to your customers regardless of how they are accessing it.</p>
+        	 <a href="#contact" class="cta">aply now</a>
         </div>
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <h2>Development Consultation</h2>
+          <p>We use our diverse experience working in a variety of verticals, arming your team with the tools 
+          needed to tackle future development challenges. We’ll help you identify and triage issues on your site, 
+          and teach you how to resolve them should they arise again.</p>
+           <a href="#contact" class="cta">aply now</a>
         </div>
       </div>
     </div>
@@ -105,11 +116,19 @@
       <div class="all-projects">
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 1</h1>
-            <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <h1>IM DEVELOPPER</h1>
+            <h2>Provide your skills</h2>
+            <p>This Application represents the portfolio and the
+				services of a developer.
+				the portfolio is a tool used to present
+				achievements, skills and experience
+				professional to an employer or clients
+				potentials.
+				It presents the design projects of the designer,
+				with a brief description of each project, the
+				technologies used and images or videos
+				of the final product. It can also include
+				testimonials from satisfied customers.</p>
           </div>
           <div class="project-img">
             <img src="./img/img-1.png" alt="img">
@@ -117,11 +136,17 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 2</h1>
+            <h1>Build a one-page resume</h1>
             <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <p>you may need it anyway! Link it to your social media and 
+            add your other web development projects as you go.
+             Your one-page resume can eventually become a repository for 
+             your portfolio.
+
+             As you design your one-page resume, think about how you 
+             would extend it if you needed to. What about an introductory
+              video? What about a “contact me” page for employers interested 
+              in learning more?</p>
           </div>
           <div class="project-img">
             <img src="./img/img-1.png" alt="img">
@@ -129,11 +154,10 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 3</h1>
+            <h1>Make an e-commerce landing page</h1>
             <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <p>This web project will show you how to create a marketing e-commerce page, which is a page
+             that collects some basic data about a potential customer. </p>
           </div>
           <div class="project-img">
             <img src="./img/img-1.png" alt="img">
@@ -141,11 +165,11 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 4</h1>
+            <h1>JavaScript quiz game</h1>
             <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <p> You can find questions online or just ask questions about something you love,
+             such as a movie that’s your favorite, or a television show. 
+             This JavaScript quiz can be as complex as you make it.</p>
           </div>
           <div class="project-img">
             <img src="./img/img-1.png" alt="img">
@@ -153,11 +177,12 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Project 5</h1>
+            <h1>media delivery service</h1>
             <h2>Coding is Love</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, iusto cupiditate voluptatum impedit unde
-              rem ipsa distinctio illum quae mollitia ut, accusantium eius odio ducimus illo neque atque libero non sunt
-              harum? Ipsum repellat animi, fugit architecto voluptatum odit et!</p>
+            <p>Want to build your own YouTube? Netflix? Spotify? That’s a media delivery 
+            service, and it’s more complicated than you think. As you build this web development
+             project, you’ll need to think about things like quality and compression. 
+             You’ll have to figure out how you want to archive and classify content.</p>
           </div>
           <div class="project-img">
             <img src="./img/img-1.png" alt="img">
@@ -179,12 +204,11 @@
       <div class="col-right">
         <h1 class="section-title">About <span>me</span></h1>
         <h2>Front End Developer</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque
-          repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt
-          exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
-          Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
-          reprehenderit libero enim!</p>
-        <a href="#" class="cta">Download Resume</a>
+        <p>Front-End Developer with proven experience at Zillow and HubSpot in helping companies
+         create and maintain a better code base for reusability. Passionate about learning and
+          development with a desire to apply skills on a larger development team at Redfin.
+           Eager to tackle more complex problems and continue to find ways to maximize user efficiency.</p>
+        <a href="#projects" class="cta">SKILLS</a>
       </div>
     </div>
   </section>
@@ -210,7 +234,7 @@
           <div class="contact-info">
             <h1>Email</h1>
             <h2>info@gmail.com</h2>
-            <h2>abcd@gmail.com</h2>
+            <h2>developer@gmail.com</h2>
           </div>
         </div>
         <div class="contact-item">
@@ -231,22 +255,26 @@
       <div class="brand">
         <h1><span>I</span>M <span>D</span>EVELOPER</h1>
       </div>
-      <h2>Your Complete Web Solution</h2>
+      <h2>SOCIAL MEDIA</h2>
       <div class="social-icon">
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          <a href=" "><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
         </div>
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          <a href=" "><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
         </div>
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          <a href=" "><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
         </div>
       </div>
-      <p>Copyright © 2023 dev. All rights reserved</p>
     </div>
   </section>
   <!-- End Footer -->
+  
+  
+  
+  
+  
   <script src="./app.js"></script>
 </body>
 

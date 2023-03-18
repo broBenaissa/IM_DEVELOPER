@@ -7018,7 +7018,8 @@ html {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 1rem 0;
+  background-color: #dbf5de
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
