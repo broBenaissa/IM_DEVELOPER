@@ -1,6 +1,6 @@
 <%
-//if(session.getAttribute("name")==null)
-	//response.sendRedirect("login.jsp");
+if(session.getAttribute("name")==null)
+	response.sendRedirect("login.jsp");
 %>
 
 <!DOCTYPE html>
@@ -33,7 +33,7 @@
             <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
             <li class="nav-item mx-0 mx-lg-1 bg-danger"><a
-			class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%= session.getAttribute("name") %></a></li>
+			class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%= session.getAttribute("name") %><span></span></a></li>
             
           </ul>
         </div>
@@ -83,7 +83,7 @@
           <p>Whether you manage content on WordPress, Drupal, or Magento, or code with PHP, JavaScript, 
           or Python, we have you covered; we act as an extension of your team and help you create a fast,
            mobile-friendly site with accessibility in mind.</p>
-            <a href="" class="cta">aply now</a>
+            <a href="#contact" class="cta">aply now</a>
         </div>
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>

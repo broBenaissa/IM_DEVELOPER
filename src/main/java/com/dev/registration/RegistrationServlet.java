@@ -33,10 +33,10 @@ public class RegistrationServlet extends HttpServlet {
 		
 		RequestDispatcher dispatcher = null;
 		Connection con= null;
-		con = _Connection.getConnection();
+		con = _Connection.methodConnection();
 
 		try {
-			PreparedStatement pst= con.prepareStatement("insert into users (uname, upwd, uemail, umobile) values(?,?,?,?)");
+			PreparedStatement pst= con.prepareStatement("insert into users (uname, upawd, uemail, umobile) values(?,?,?,?)");
 			pst.setString(1, uname);
 			pst.setString(2, upwd);
 			pst.setString(3, uemail);

@@ -27,16 +27,16 @@ public class Login extends HttpServlet {
 		String upwd = request.getParameter("password");
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = null;
-		Connection con = _Connection.getConnection();
+		Connection con = _Connection.methodConnection();
 		try {
-			PreparedStatement pst = con.prepareStatement("select * from users where uemail=? and upwd=?");
+			PreparedStatement pst = con.prepareStatement("select * from users where uemail=? and upawd=?");
 			pst.setString(1, uemail);
 			pst.setString(2, upwd);
 			
 			ResultSet rs = pst.executeQuery();
 			if(rs.next()) {
 				session.setAttribute("name", rs.getString("uname"));
-				dispatcher = request.getRequestDispatcher("index.jsp");
+				dispatcher = request.getRequestDispatcher("DeveloperHome.jsp");
 			}else {
 				request.setAttribute("status", "failed");
 				dispatcher = request.getRequestDispatcher("login.jsp");

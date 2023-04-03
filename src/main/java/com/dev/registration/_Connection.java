@@ -8,16 +8,16 @@ public class _Connection {
 	
 	static {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection
-					("jdbc:mysql://localhost/IMDEVELOPPER?useSSL=false","root","benaissa");
+					("jdbc:mysql://localhost:3305/imdevelopper?useSSL=false","root","benaissa");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 
 	}
 
-	public static Connection getConnection () {
+	public static Connection methodConnection () {
 		return connection;
 	}
 
