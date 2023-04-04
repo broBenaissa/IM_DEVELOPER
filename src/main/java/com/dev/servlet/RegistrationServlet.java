@@ -2,9 +2,10 @@ package com.dev.servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import com.dev.connection._Connection;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

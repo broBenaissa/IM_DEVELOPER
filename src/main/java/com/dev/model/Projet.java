@@ -1,28 +1,28 @@
-package com.example.model;
+package com.dev.model;
 
-public class Service {
+public class Projet {
 	protected int id;
 	protected String name;
 	protected String description ;
-	protected String price;
+	protected String image;
 	
 	
 
-	public Service(int id, String name, String description, String price) {
+	public Projet(int id, String name, String description, String image) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.price = price;
+		this.image = image;
 	}
 	
 
 
-	public Service(String name, String description, String price) {
+	public Projet(String name, String description, String image) {
 		super();
 		this.name = name;
 		this.description = description;
-		this.price = price;
+		this.image = image;
 	}
 
 	public int getId() {
@@ -46,12 +46,12 @@ public class Service {
 		this.description = description;
 	}
 
-	public String getPrice() {
-		return price;
+	public String getImage() {
+		return image;
 	}
 
-	public void setImage(String price) {
-		this.price = price;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }

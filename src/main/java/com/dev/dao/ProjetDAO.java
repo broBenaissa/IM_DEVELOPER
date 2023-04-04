@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.model.Projet;
+import com.dev.model.Projet;
 
 public class ProjetDAO {
 	private String jdbcURL = "jdbc:mysql://localhost/imdevelopper?useSSL=false";

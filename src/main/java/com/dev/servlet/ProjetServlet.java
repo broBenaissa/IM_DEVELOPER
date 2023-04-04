@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.model.Projet;
+import com.dev.dao.ProjetDAO;
+import com.dev.model.Projet;
 
 
 

@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.model.Service;
+import com.dev.dao.ServiceDAO;
+import com.dev.model.Service;
 
 
 

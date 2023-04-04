@@ -1,4 +1,4 @@
-package com.example.model;
+package com.dev.model;
 
 public class user {
 	private int uid;
