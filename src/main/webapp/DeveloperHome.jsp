@@ -29,8 +29,8 @@ if(session.getAttribute("name")==null)
           </div>
           <ul>
             <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#service-list.jsp" data-after="Service">Services</a></li>
-            <li><a href="#projet-list.jsp" data-after="Projects">Projects</a></li>
+            <li><a href="service-list.jsp" data-after="Service">Services</a></li>
+            <li><a href="projet-list.jsp" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
             <li class="nav-item mx-0 mx-lg-1 bg-danger"><a
 			class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%= session.getAttribute("name") %><span></span></a></li>
