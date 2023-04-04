@@ -1,50 +1,57 @@
 package com.example.model;
 
 public class Projet {
-	private int id;
-	private String titre;
-	private String description;
-	private String url;
+	protected int id;
+	protected String name;
+	protected String description ;
+	protected String image;
 	
-	public Projet() {}
+	
 
-	public Projet(int id, String titre, String description, String url) {
-	    this.id = id;
-	    this.titre = titre;
-	    this.description = description;
-	    this.url = url;
+	public Projet(int id, String name, String description, String image) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.image = image;
+	}
+	
+
+
+	public Projet(String name, String description, String image) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.image = image;
 	}
 
 	public int getId() {
-	    return id;
+		return id;
 	}
-
 	public void setId(int id) {
-	    this.id = id;
+		this.id = id;
 	}
-
-	public String getTitre() {
-	    return titre;
+	public String getName() {
+		return name;
 	}
-
-	public void setTitre(String titre) {
-	    this.titre = titre;
+	public void setName(String name) {
+		this.name = name;
 	}
-
+	
 	public String getDescription() {
-	    return description;
+		return description;
 	}
 
 	public void setDescription(String description) {
-	    this.description = description;
+		this.description = description;
 	}
 
-	public String getUrl() {
-	    return url;
+	public String getImage() {
+		return image;
 	}
 
-	public void setUrl(String url) {
-	    this.url = url;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }

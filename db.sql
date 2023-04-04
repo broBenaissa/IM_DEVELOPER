@@ -5,7 +5,7 @@ create table users (uid int unique auto_increment,uname varchar(50),upawd varcha
 INSERT INTO `imdevelopper`.`users` (`uid`, 'uname',`upwd`, `uemail`,'umobile') VALUES ('1', devlopper, 123,
 123456789);
 
-create table projects (pid int unique auto_increment,pname varchar(50),pdescription varchar(1000),pimg varchar(200));
+CREATE TABLE projet(id INT NOT NULL PRIMARY KEY auto_increment , name VARCHAR(50), description VARCHAR(255), image varchar(50) );
 INSERT INTO `imdevelopper`.`projects` (`pid`, `pname`, `pdescription`,`pimg`) VALUES ('1', 'im developper', 
 'Cette Application représente le portfolio et les
  services d un développeur.
