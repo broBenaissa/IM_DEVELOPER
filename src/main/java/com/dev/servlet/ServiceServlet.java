@@ -1,4 +1,4 @@
-package com.dev.registration;
+package com.dev.servlet;
 
 import java.io.IOException;
 
@@ -12,17 +12,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.example.model.Projet;
+import com.example.model.Service;
 
 
 
 @WebServlet("/")
-public class ProjetServlet extends HttpServlet {
+public class ServiceServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ProjetDAO projetDAO;
+	private ServiceDAO serviceDAO;
 	
 	public void init() {
-		projetDAO = new ProjetDAO();
+		serviceDAO = new ServiceDAO();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -36,23 +36,23 @@ public class ProjetServlet extends HttpServlet {
 
 		try {
 			switch (action) {
-			case "/new":
+			case "/newS":
 				showNewForm(request, response);
 				break;
 			case "/insert":
-				insertProjet(request, response);
+				insertService(request, response);
 				break;
 			case "/delete":
-				deleteProjet(request, response);
+				deleteService(request, response);
 				break;
 			case "/edit":
 				showEditForm(request, response);
 				break;
 			case "/update":
-				updateProjet(request, response);
+				updateService(request, response);
 				break;
 			default:
-				listProjet(request, response);
+				listService(request, response);
 				break;
 			}
 		} catch (SQLException ex) {
@@ -60,55 +60,55 @@ public class ProjetServlet extends HttpServlet {
 		}
 	}
 
-	private void listProjet(HttpServletRequest request, HttpServletResponse response)
+	private void listService(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
-		List<Projet> listProjet = projetDAO.selectAllProjets();
-		request.setAttribute("listProjet", listProjet);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("projet-list.jsp");
+		List<Service> listService = serviceDAO.selectAllServices();
+		request.setAttribute("listService", listService);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("service-list.jsp");
 		dispatcher.forward(request, response);
 	}
 
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("projet-form.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("service-form.jsp");
 		dispatcher.forward(request, response);
 	}
 
 	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		Projet existingProjet = projetDAO.selectProjet(id);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("projet-form.jsp");
-		request.setAttribute("Projet", existingProjet);
+		Service existingService = serviceDAO.selectService(id);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("service-form.jsp");
+		request.setAttribute("service", existingService);
 		dispatcher.forward(request, response);
 
 	}
 
-	private void insertProjet(HttpServletRequest request, HttpServletResponse response) 
+	private void insertService(HttpServletRequest request, HttpServletResponse response) 
 			throws SQLException, IOException {
 		String name = request.getParameter("name");
 		String description = request.getParameter("description");
-		String image = request.getParameter("image");
-		Projet newProjet = new Projet(name, description, image);
-		projetDAO.insertProjet(newProjet);
-		response.sendRedirect("list");
+		String price = request.getParameter("price");
+		Service newService = new Service(name, description, price);
+		serviceDAO.insertService(newService);
+		response.sendRedirect("listS");
 	}
 
-	private void updateProjet(HttpServletRequest request, HttpServletResponse response) 
+	private void updateService(HttpServletRequest request, HttpServletResponse response) 
 			throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String name = request.getParameter("name");
 		String description = request.getParameter("description");
-		String image = request.getParameter("image");
-		Projet book = new Projet(id, name, description, image);
-		projetDAO.updateProjet(book);
-		response.sendRedirect("list");
+		String price = request.getParameter("price");
+		Service book = new Service(id, name, description, price);
+		serviceDAO.updateService(book);
+		response.sendRedirect("listS");
 	}
 
-	private void deleteProjet(HttpServletRequest request, HttpServletResponse response) 
+	private void deleteService(HttpServletRequest request, HttpServletResponse response) 
 			throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		projetDAO.deleteProjet(id);
-		response.sendRedirect("list");
+		serviceDAO.deleteService(id);
+		response.sendRedirect("listS");
 	}
 }

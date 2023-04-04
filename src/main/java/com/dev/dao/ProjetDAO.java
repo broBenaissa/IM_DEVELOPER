@@ -1,4 +1,4 @@
-package com.dev.registration;
+package com.dev.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,22 +8,21 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.model.Service;
+import com.example.model.Projet;
 
-
-public class ServiceDAO {
-	private String jdbcURL = "jdbc:mysql://localhost/data?useSSL=false";
+public class ProjetDAO {
+	private String jdbcURL = "jdbc:mysql://localhost/imdevelopper?useSSL=false";
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "salma-4u";
 
-	private static final String INSERT_SERVICES_SQL = "INSERT INTO service" + "  (name, description, price) VALUES " + " (?, ?, ?);";
+	private static final String INSERT_PROJETS_SQL = "INSERT INTO projet" + "  (name, description, image) VALUES " + " (?, ?, ?);";
 
-	private static final String SELECT_SERVICES_BY_ID = "select id,name,description,price from service where id =?";
-	private static final String SELECT_ALL_SERVICES = "select * from service";
-	private static final String DELETE_SERVICES_SQL = "delete from service where id = ?;";
-	private static final String UPDATE_SERVICES_SQL = "update service set name = ?,description= ?, price =? where id = ?;";
+	private static final String SELECT_PROJETS_BY_ID = "select id,name,description,image from projet where id =?";
+	private static final String SELECT_ALL_PROJETS = "select * from projet";
+	private static final String DELETE_PROJETS_SQL = "delete from projet where id = ?;";
+	private static final String UPDATE_PROJETS_SQL = "update projet set name = ?,description= ?, image =? where id = ?;";
 
-	public ServiceDAO() {
+	public ProjetDAO() {
 	}
 
 	protected Connection getConnection() {
@@ -41,14 +40,14 @@ public class ServiceDAO {
 		return connection;
 	}
 
-	public void insertService(Service service) throws SQLException {
-		System.out.println(INSERT_SERVICES_SQL);
+	public void insertProjet(Projet projet) throws SQLException {
+		System.out.println(INSERT_PROJETS_SQL);
 		// try-with-resource statement will auto close the connection.
 		try (Connection connection = getConnection();
-				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_SERVICES_SQL)) {
-			preparedStatement.setString(1, service.getName());
-			preparedStatement.setString(2, service.getDescription());
-			preparedStatement.setString(3, service.getPrice());
+				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PROJETS_SQL)) {
+			preparedStatement.setString(1, projet.getName());
+			preparedStatement.setString(2, projet.getDescription());
+			preparedStatement.setString(3, projet.getImage());
 			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
@@ -56,12 +55,12 @@ public class ServiceDAO {
 		}
 	}
 
-	public Service selectService(int id) {
-		Service service = null;
+	public Projet selectProjet(int id) {
+		Projet projet = null;
 		// Step 1: Establishing a Connection
 		try (Connection connection = getConnection();
 				// Step 2:Create a statement using connection object
-				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_SERVICES_BY_ID);) {
+				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_PROJETS_BY_ID);) {
 			preparedStatement.setInt(1, id);
 			System.out.println(preparedStatement);
 			// Step 3: Execute the query or update query
@@ -71,24 +70,24 @@ public class ServiceDAO {
 			while (rs.next()) {
 				String name = rs.getString("name");
 				String description = rs.getString("description");
-				String price = rs.getString("price");
-				service = new Service(id, name, description, price);
+				String image = rs.getString("image");
+				projet = new Projet(id, name, description, image);
 			}
 		} catch (SQLException e) {
 			printSQLException(e);
 		}
-		return service;
+		return projet;
 	}
 
-	public List<Service> selectAllServices() {
+	public List<Projet> selectAllProjets() {
 
 		// using try-with-resources to avoid closing resources (boiler plate code)
-		List<Service> services = new ArrayList<>();
+		List<Projet> projets = new ArrayList<>();
 		// Step 1: Establishing a Connection
 		try (Connection connection = getConnection();
 
 				// Step 2:Create a statement using connection object
-			PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_SERVICES);) {
+			PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_PROJETS);) {
 			System.out.println(preparedStatement);
 			// Step 3: Execute the query or update query
 			ResultSet rs = preparedStatement.executeQuery();
@@ -98,33 +97,33 @@ public class ServiceDAO {
 				int id = rs.getInt("id");
 				String name = rs.getString("name");
 				String description = rs.getString("description");
-				String price = rs.getString("price");
-				services.add(new Service(id, name, description, price));
+				String image = rs.getString("image");
+				projets.add(new Projet(id, name, description, image));
 			}
 		} catch (SQLException e) {
 			printSQLException(e);
 		}
-		return services;
+		return projets;
 	}
 
-	public boolean deleteService(int id) throws SQLException {
+	public boolean deleteProjet(int id) throws SQLException {
 		boolean rowDeleted;
 		try (Connection connection = getConnection();
-				PreparedStatement statement = connection.prepareStatement(DELETE_SERVICES_SQL);) {
+				PreparedStatement statement = connection.prepareStatement(DELETE_PROJETS_SQL);) {
 			statement.setInt(1, id);
 			rowDeleted = statement.executeUpdate() > 0;
 		}
 		return rowDeleted;
 	}
 
-	public boolean updateService(Service service) throws SQLException {
+	public boolean updateProjet(Projet projet) throws SQLException {
 		boolean rowUpdated;
 		try (Connection connection = getConnection();
-				PreparedStatement statement = connection.prepareStatement(UPDATE_SERVICES_SQL);) {
-			statement.setString(1, service.getName());
-			statement.setString(2, service.getDescription());
-			statement.setString(3, service.getPrice());
-			statement.setInt(4, service.getId());
+				PreparedStatement statement = connection.prepareStatement(UPDATE_PROJETS_SQL);) {
+			statement.setString(1, projet.getName());
+			statement.setString(2, projet.getDescription());
+			statement.setString(3, projet.getImage());
+			statement.setInt(4, projet.getId());
 
 			rowUpdated = statement.executeUpdate() > 0;
 		}

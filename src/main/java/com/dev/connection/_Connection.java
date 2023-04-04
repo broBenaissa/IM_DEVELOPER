@@ -1,4 +1,4 @@
-package com.dev.registration;
+package com.dev.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package com.dev.registration;
+package com.dev.servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
