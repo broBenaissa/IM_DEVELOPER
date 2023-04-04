@@ -13,9 +13,9 @@
 			<br>
 			<br>
         <h2>
-        	<a class="btn btn-primary mr-2" href="new">Add New Service</a>
+        	<a class="btn btn-primary mr-2" href="newS">Add New Service</a>
         	&nbsp;&nbsp;&nbsp;
-        	<a class="btn btn-primary" href="list">List All Services</a>
+        	<a class="btn btn-primary" href="listS">List All Services</a>
         	
         </h2>
         	<br>

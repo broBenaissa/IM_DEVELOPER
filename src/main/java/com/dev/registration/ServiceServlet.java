@@ -36,7 +36,7 @@ public class ServiceServlet extends HttpServlet {
 
 		try {
 			switch (action) {
-			case "/new":
+			case "/newS":
 				showNewForm(request, response);
 				break;
 			case "/insert":
@@ -77,9 +77,9 @@ public class ServiceServlet extends HttpServlet {
 	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		Service existingProjet = serviceDAO.selectService(id);
+		Service existingService = serviceDAO.selectService(id);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("service-form.jsp");
-		request.setAttribute("Projet", existingProjet);
+		request.setAttribute("service", existingService);
 		dispatcher.forward(request, response);
 
 	}
@@ -91,7 +91,7 @@ public class ServiceServlet extends HttpServlet {
 		String price = request.getParameter("price");
 		Service newService = new Service(name, description, price);
 		serviceDAO.insertService(newService);
-		response.sendRedirect("list");
+		response.sendRedirect("listS");
 	}
 
 	private void updateService(HttpServletRequest request, HttpServletResponse response) 
@@ -102,13 +102,13 @@ public class ServiceServlet extends HttpServlet {
 		String price = request.getParameter("price");
 		Service book = new Service(id, name, description, price);
 		serviceDAO.updateService(book);
-		response.sendRedirect("list");
+		response.sendRedirect("listS");
 	}
 
 	private void deleteService(HttpServletRequest request, HttpServletResponse response) 
 			throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		serviceDAO.deleteService(id);
-		response.sendRedirect("list");
+		response.sendRedirect("listS");
 	}
 }
