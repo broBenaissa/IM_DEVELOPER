@@ -1,6 +1,6 @@
 <%
-if(session.getAttribute("name")==null)
-	response.sendRedirect("login.jsp");
+//if(session.getAttribute("name")==null)
+	//response.sendRedirect("login.jsp");
 %>
 
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ if(session.getAttribute("name")==null)
            to help optimize your digital presence!</h2>
       </div>
       <!-- services item -->
-      
+       <a href="service-form.jsp" class="cta" style="color:black;">+ add new project</a>
       <div class="service-bottom">
         <div class="service-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
@@ -112,6 +112,7 @@ if(session.getAttribute("name")==null)
     <div class="projects container">
       <div class="projects-header">
         <h1 class="section-title">Recent <span>Projects</span></h1>
+         <a href="projet-form.jsp" class="cta" style="color:black;">+ add new project</a>
       </div>
       <div class="all-projects">
         <div class="project-item">

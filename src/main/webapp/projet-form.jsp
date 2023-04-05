@@ -6,7 +6,7 @@
 	<title> Application</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></head>
 <body>
-	<center>
+	<div align="center">
 			<h1>Project</h1>
 	<br>
 		<br>
@@ -27,7 +27,7 @@
             		</c:if>
             	</h2>
             </caption>
-	</center>
+	</div>
     <div align="center">
 		<c:if test="${projet != null}">
 			<form action="update" method="post">
